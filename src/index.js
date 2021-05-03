@@ -1,8 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { createBrowserHistory } from 'history';
+
 import App from "./App";
+import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+const history = createBrowserHistory();
+
+// Handle S3 redirects
+const path = (/#!(\/.*)$/.exec(window.location.hash) || [])[1];
+if (path) {
+  history.replace(path);
+}
+
 
 ReactDOM.render(
   <React.StrictMode>

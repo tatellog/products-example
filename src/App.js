@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { SnackbarProvider } from 'notistack';
 
+import  {Home}  from 'pages';
+
 function App() {
 
   return (
@@ -16,8 +18,8 @@ function App() {
       <Suspense >
             <Router>
               <Switch>
-                <Route path='/feed'>
-                  <h3>Hola Mundo</h3>
+                <Route path='/home'>
+                <Home/>
                 </Route>
               </Switch>
             </Router>
