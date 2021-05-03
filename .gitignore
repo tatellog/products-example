@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+.vscode/
+
+.eslintcache
+
+# production
+/build
+.idea/
+.idea/workspace.xml
